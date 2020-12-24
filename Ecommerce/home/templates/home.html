@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+
+{% block head_title %} Home{% endblock %}
+
+{% block content %}
+{%for item in item_list%}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src={{item.image}} alt="Card image cap">
+  <div class="card-body">
+      <a href="#" class="btn btn-primary">{{item.item_name}}</a>
+    <h5 class="card-title">Price {{item.price}}</h5>
+    <p class="card-text">Rating {{item.rating}}</p>
+  </div>
+</div>
+{%endfor%}
+{% endblock %}
